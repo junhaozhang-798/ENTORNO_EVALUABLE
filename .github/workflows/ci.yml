@@ -21,4 +21,4 @@ jobs:
           distribution: 'temurin'
 
       - name: Compilar el proyecto
-        run: javac src/main/java/*.java
+        run: javac Main.java Producto.java
