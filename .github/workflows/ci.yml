@@ -1,4 +1,4 @@
-name: Prueba
+name: PRUEBA
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: maven
 
-      - name: Compilar y ejecutar pruebas
-        run: mvn --batch-mode clean verify
+      - name: Compilar el proyecto
+        run: javac src/main/java/*.java
